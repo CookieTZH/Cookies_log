@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>个人站点</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="/">我的个人网站</a></h1>
+    <nav>
+      <a href="/">文章</a>
+      <a href="files/">下载</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="posts">
+      <h2>最新文章</h2>
+      <div id="post-list">加载中…</div>
+    </section>
+  </main>
+
+  <footer class="site-footer">© <span id="year"></span> 我</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
