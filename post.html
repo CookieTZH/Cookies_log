@@ -4,24 +4,29 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>文章</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css">
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <h1><a href="/">我的个人网站</a></h1>
-    <nav>
-      <a href="/">文章</a>
-      <a href="/files/">下载</a>
-    </nav>
+  <header class="site-header mdui-appbar">
+    <div class="mdui-toolbar">
+      <a href="/" class="mdui-typo-headline">我的个人网站</a>
+      <div class="mdui-toolbar-spacer"></div>
+      <nav>
+        <a class="mdui-btn mdui-ripple" href="/">文章</a>
+        <a class="mdui-btn mdui-ripple" href="/files/">下载</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="container">
-    <article id="post-content">加载中…</article>
+  <main class="mdui-container container">
+    <article id="post-content" class="mdui-card">加载中…</article>
   </main>
 
   <footer class="site-footer">© <span id="year"></span> 我</footer>
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js"></script>
   <script src="/js/main.js"></script>
 </body>
 </html>

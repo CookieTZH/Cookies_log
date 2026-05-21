@@ -10,9 +10,9 @@ async function loadPostsList(){
     listEl.innerHTML = ''
     posts.sort((a,b)=> (a.date<b.date?1:-1))
     posts.forEach(p=>{
-      const card = document.createElement('div')
-      card.className='post-card'
-      card.innerHTML = `<a href="post.html?post=${encodeURIComponent(p.file)}"><strong>${p.title}</strong><div class="post-meta">${formatDate(p.date)} · ${p.excerpt||''}</div></a>`
+        const card = document.createElement('div')
+        card.className='mdui-card post-card'
+        card.innerHTML = `<a href="post.html?post=${encodeURIComponent(p.file)}" class="mdui-ripple"><div class="mdui-card-primary"><div class="mdui-card-primary-title">${p.title}</div></div><div class="post-meta">${formatDate(p.date)} · ${p.excerpt||''}</div></a>`
       listEl.appendChild(card)
     })
   }catch(e){listEl.textContent='加载失败'}
@@ -43,8 +43,8 @@ async function loadFilesList(){
     listEl.innerHTML = ''
     files.forEach(f=>{
       const div = document.createElement('div')
-      div.className='post-card'
-      div.innerHTML = `<a href="${f.path}"><strong>${f.name}</strong><div class="post-meta">${f.desc||''}</div></a>`
+      div.className='mdui-card post-card'
+      div.innerHTML = `<a href="${f.path}" class="mdui-ripple"><div class="mdui-card-primary"><div class="mdui-card-primary-title">${f.name}</div></div><div class="post-meta">${f.desc||''}</div></a>`
       listEl.appendChild(div)
     })
   }catch(e){ if(listEl) listEl.textContent='加载失败' }
